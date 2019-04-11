@@ -1,19 +1,12 @@
 {
-  "posts": [
+  "Employees": [
     {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
+      "id": "LAjO13",
+      "Prenom": "sqsqs",
+      "Age": 32,
+      "Nom": "sdfsdf",
+      "email": "ismai-labbi@hotmail.com",
+      "Salary": 45000
     }
-  ],
-  "comments": [
-    {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
-    }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }

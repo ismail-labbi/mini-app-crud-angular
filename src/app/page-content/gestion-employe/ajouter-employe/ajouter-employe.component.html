@@ -1,3 +1,5 @@
+<flash-messages></flash-messages>
+
 <div class="row">
 
   <div class="col-auto mr-auto">
@@ -42,7 +44,7 @@
               <label for="Prenom">Prenom :</label>
               <div class="input-group">
                   <div class="input-group-addon"><i class="fa fa-user"></i></div>
-                <input type="text" class="form-control " id="Prenom" placeholder="Prenom" [(ngModel)]="Prenom" name="Prenom" required #Prenomt="ngModel">
+                <input type="text" class="form-control " id="Prenom" placeholder="Prenom" [(ngModel)]="Prenom" name="Prenom" required #Prenomt="ngModel" >
               </div>
             </div>
             <div class="col-md-6 mb-3 validationdiv" *ngIf="Prenomt.errors?.required &&(Prenomt.touched)" [ngStyle]="{'color':'red'}">
@@ -140,7 +142,7 @@
           </div>
         </div>
 
-        <button type="submit" class="btn btn-success" [disabled]="!adduser.form.valid" (click)="Mysubmit()"> Submit </button>
+        <button type="submit" class="btn btn-success" [disabled]="!adduser.form.valid" (click)="Mysubmit(Prenomt,emailt)"> Submit </button>
 
       </form>
 
