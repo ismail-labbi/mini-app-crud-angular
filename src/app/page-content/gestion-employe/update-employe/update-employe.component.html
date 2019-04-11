@@ -1,0 +1,138 @@
+<div class="row">
+
+  <div class="col-auto mr-auto">
+
+    <button type="button" class="btn btn-primary" [routerLink]="['/gestionemploye/table-employee']">
+
+      <span class="ti-arrow-left"> </span>
+     Tableau d'employés
+
+
+     </button>
+  </div>
+</div>
+<div class="row">
+
+  <div class="col-lg-12">
+    <div class="card">
+      <div class="card-header">Formulaire modification </div>
+      <div class="card-body card-block">
+
+
+    <form #adduser="ngForm">
+  
+      <div class="form-group">
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label for="Nom">Nom :</label>
+            <div>
+              <input type="text" class="form-control " id="Nom" [placeholder]="this.emp.GetNom()" [(ngModel)]="this.Nom" name="Nom" #Nomt="ngModel">
+            </div>
+          </div>
+         
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label for="Prenom">Prenom :</label>
+            <div>
+              <input type="text" class="form-control " id="Prenom" [placeholder]="this.emp.GetPrenom()" [(ngModel)]="Prenom" name="Prenom"  #Prenomt="ngModel">
+            </div>
+          </div>
+         
+        </div>
+      </div>
+  
+  
+  
+  
+      <div class="form-group">
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label for="email">Email :</label>
+            <div>
+              <input type="text" class="form-control " id="email"[placeholder]="this.emp.Getemail()" [(ngModel)]="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
+                #emailt="ngModel">
+            </div>
+          </div>
+         
+          <div class="col-md-6 mb-3 validationdiv" *ngIf="(emailt.errors?.pattern)&&(emailt.touched)" [ngStyle]="{'color':'red'}">
+            Email non valide
+          </div>
+        </div>
+      </div>
+  
+  
+  
+  
+  
+      <div class="form-group">
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label for="email">Age :</label>
+            <div>
+              <input type="text" class="form-control " [placeholder]="this.emp. getAge()"   id="Age" [(ngModel)]="Age" name="Age" max="60" Agevalidator  #Aget="ngModel">
+            </div>
+          </div>
+        
+          <div class="col-md-6 mb-3 validationdiv" *ngIf="(Aget.errors?.Ageptit)&&(Aget.dirty||Aget.touched)" [ngStyle]="{'color':'red'}">
+            *Age doit être plus grand que 21 ans 
+          </div>
+          <div class="col-md-6 mb-3 validationdiv" *ngIf="(Aget.errors?.Agegrand)&&(Aget.dirty||Aget.touched)" [ngStyle]="{'color':'red'}">
+            Age doit être plus petit que 60 ans
+          </div>
+          <div class="col-md-6 mb-3 validationdiv" *ngIf="(Aget.errors?.CaracterAge)&&(Aget.dirty)" [ngStyle]="{'color':'red'}">
+            Veuillez écrire l'age en forme correcte
+          </div>
+        </div>
+      </div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+      <div class="form-group">
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label class="control-label">Salary</label>
+  
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text">$</span>
+              </div>
+              <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)" [placeholder]="this.emp.getSalary()" [(ngModel)]="Salary" name="Salary" max="60"
+              Salaryvalidator #Salaryt="ngModel">
+              <div class="input-group-append">
+                <span class="input-group-text">.00</span>
+              </div>
+            </div>
+          </div>
+        
+      
+  
+         
+              <div class="col-md-6 mb-3 validationdiv" *ngIf="Salaryt.errors?.Salaryngeative &&(Salaryt.touched)" [ngStyle]="{'color':'red'}">
+               *Le salaire ne peut pas être négative
+              </div>
+           
+  
+        </div>
+      </div>
+  
+      <button type="submit" class="btn btn-success" [disabled]="!adduser.form.valid" (click)="modifier()" > Submit </button>
+  
+    </form>
+  
+  </div>
+  </div>
+  </div>
+</div>
+<div>
+
+</div>

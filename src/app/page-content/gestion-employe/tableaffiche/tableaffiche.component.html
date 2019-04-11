@@ -1,0 +1,142 @@
+
+
+
+
+<div class="row">
+  <div class="col-lg-3 col-md-6">
+    <div class="card">
+      <div class="card-body">
+        <div class="stat-widget-five">
+          <div class="stat-icon dib flat-color-1">
+            <i class="pe-7s-cash"></i>
+          </div>
+          <div class="stat-content">
+            <div class="text-left dib">
+              <div class="stat-text">$
+                {{TotalSalary}}
+              </div>
+              <div class="stat-heading">Salaire totale</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <div class="col-lg-3 col-md-6">
+    <div class="card">
+      <div class="card-body">
+        <div class="stat-widget-five">
+          <div class="stat-icon dib flat-color-4">
+            <i class="pe-7s-users"></i>
+          </div>
+          <div class="stat-content">
+            <div class="text-left dib">
+              <div class="stat-text">
+            {{TotalEmployees}}
+              </div>
+              <div class="stat-heading">Employés</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="row">
+   
+    <div class="col-auto ml-auto">
+
+      <button type="button" class="btn btn-primary" [routerLink]="['/gestionemploye/add-employee']">
+        <i class="fa fa-user"></i>
+        
+        Ajouter employé</button></div>
+  </div>
+
+
+
+<div class="orders">
+  <div class="row">
+    <div class="col-xl-12">
+      <div class="card">
+        <div class="card-body">
+        
+        </div>
+        <div class="card-body--">
+          <div class="table-stats order-table ov-h">
+            <table class="table ">
+              <thead>
+                <tr>
+
+
+                  <th>ID</th>
+                  <th>Nom</th>
+                  <th>Prénom</th>
+                  <th>Age</th>
+                  <th>Email</th>
+                  <th>Salary</th>
+                  <th></th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+
+
+
+                <tr *ngFor="let employee of Employees; let i=index">
+
+
+                  <td> {{employee.id}} </td>
+                  <td>
+                    <span class="name">{{employee.Nom}}</span>
+                  </td>
+                  <td>
+                    <span class="product">{{employee.Prenom}}</span>
+                  </td>
+                  <td>
+                    <span class="count">{{employee.Age}}</span>
+                  </td>
+                  <td>
+                    {{employee.email}}
+                  </td>
+                  <td>
+                    {{employee.Salary| currency}}
+                  </td>
+                  <td>
+                    <button type="button" class="btn btn-success"  (click)="Modifier(employee)">Modifier</button>
+                  </td>
+                  <td>
+                    <button type="button" class="btn btn-warning" (click)="openConfirmationDialog(employee.id)">Supprimer</button>
+                  </td>
+                </tr>
+
+
+
+
+              </tbody>
+            </table>
+          </div>
+          <!-- /.table-stats -->
+        </div>
+      </div>
+      <!-- /.card -->
+    </div>
+    <!-- /.col-lg-8 -->
+
+
+  </div>
+</div>
