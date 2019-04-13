@@ -64,6 +64,7 @@ export class TableafficheComponent implements OnInit {
         this.EmployeesJsonService.getEmployees(true).subscribe((val)=>{
           this.Employees=val;
           this.TotalEmployees=val.length;
+          this.TotalSalary=this.totalSalary();
         
         });
       });

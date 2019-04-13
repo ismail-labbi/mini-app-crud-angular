@@ -41,7 +41,7 @@ export class AjouterEmployeComponent implements OnInit {
     this.EmpServiceJson.ajouterEmployee(this.employe).subscribe(
       x=>{    this.flashMessage.show(' opération réussie', { cssClass: 'alert-success', timeout: 2000 });
       
-   
+      
    this.viderlestextes();
    
       
