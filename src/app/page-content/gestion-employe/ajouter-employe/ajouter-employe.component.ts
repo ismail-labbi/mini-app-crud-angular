@@ -19,6 +19,7 @@ export class AjouterEmployeComponent implements OnInit {
    private Id :string;
    private Salary:string;
    private email:string;
+   private compteur:number=0;
  
   constructor(public EmpServiceJson:EmployeesJsonService,private flashMessage: FlashMessagesService) { }
 
@@ -43,9 +44,11 @@ export class AjouterEmployeComponent implements OnInit {
       
       
    this.viderlestextes();
+   this.compteur=this.compteur+1;
    
       
     }
+    
     );    
   }
   viderlestextes(){
@@ -55,6 +58,7 @@ export class AjouterEmployeComponent implements OnInit {
     this.Prenom="";
     this.Salary="";
   }
+  
 
 
 

@@ -62,7 +62,7 @@
               <label for="email">Email :</label>
               <div class="input-group">
                   <div class="input-group-addon"><i class="fa fa-envelope"></i></div>
-                <input type="text" class="form-control " id="email" placeholder="aaaaa@hotmail.com" [(ngModel)]="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
+                <input type="text" class="form-control " id="email" placeholder="email" [(ngModel)]="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
                   required #emailt="ngModel">
               </div>
             </div>
@@ -88,6 +88,7 @@
                 <input type="text" class="form-control " id="Age" [(ngModel)]="Age" name="Age" max="60" Agevalidator required #Aget="ngModel">
               </div>
             </div>
+          
             <div class="col-md-6 mb-3 validationdiv" *ngIf="Aget.errors?.required &&(Aget.touched)" [ngStyle]="{'color':'red'}">
               *Ce champs est Obligatoire
             </div>
