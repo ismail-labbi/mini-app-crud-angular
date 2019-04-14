@@ -19,7 +19,8 @@ import { UpdateEmployeComponent } from './page-content/gestion-employe/update-em
 import { ChartsModule } from 'ng2-charts';
 import { ConfirmationDialogComponent } from './page-content/gestion-employe/confirmation-dialog/confirmation-dialog.component';
 import { ConfirmationDialogService } from './page-content/gestion-employe/confirmation-dialog/confirmation-dialog.service';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap'
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { AuthentificationComponent } from './Authentification_Page/authentification/authentification.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,6 +34,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap'
 
     TableafficheComponent,
     UpdateEmployeComponent,
+    AuthentificationComponent,
 
     
   ],

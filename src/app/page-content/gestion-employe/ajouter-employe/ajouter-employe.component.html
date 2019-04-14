@@ -66,7 +66,7 @@
                   required #emailt="ngModel">
               </div>
             </div>
-            <div class="col-md-6 mb-3 validationdiv" *ngIf="emailt.errors?.required &&(emailt.touched)" [ngStyle]="{'color':'red'}">
+            <div class="col-md-6 mb-3 validationdiv" *ngIf="emailt.errors?.required &&(emailt.dirty)" [ngStyle]="{'color':'red'}">
               *Ce champs est Obligatoire
             </div>
             <div class="col-md-6 mb-3 validationdiv" *ngIf="(emailt.errors?.pattern)&&(emailt.touched)" [ngStyle]="{'color':'red'}">
@@ -142,9 +142,9 @@
 
           </div>
         </div>
+        <input type="reset" value="Submit " class="btn btn-success" [disabled]="!adduser.form.valid" (click)="Mysubmit(Prenomt,emailt)">
 
-        <button type="submit" class="btn btn-success" [disabled]="!adduser.form.valid" (click)="Mysubmit(Prenomt,emailt)"> Submit </button>
-
+       
       </form>
 
 

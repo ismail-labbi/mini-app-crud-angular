@@ -20,7 +20,7 @@ export class AjouterEmployeComponent implements OnInit {
    private Salary:string;
    private email:string;
    private compteur:number=0;
- 
+  
   constructor(public EmpServiceJson:EmployeesJsonService,private flashMessage: FlashMessagesService) { }
 
   ngOnInit() {
@@ -44,7 +44,7 @@ export class AjouterEmployeComponent implements OnInit {
       
       
    this.viderlestextes();
-   this.compteur=this.compteur+1;
+
    
       
     }
